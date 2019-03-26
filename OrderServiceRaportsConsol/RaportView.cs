@@ -18,9 +18,9 @@ namespace OrderServiceRaportsConsol
 
             Console.WriteLine();
             Console.WriteLine("Jak przedstawic raport: ");
-            Console.WriteLine("1. Zapisac do pliku");
-            Console.WriteLine("2. Wypisac w konsoli");
-            Console.WriteLine("3. Wypisac w konsoli i zapisac do pliku");
+            Console.WriteLine("1. Zapisać do pliku");
+            Console.WriteLine("2. Wypisać w konsoli");
+            Console.WriteLine("3. Wypisać w konsoli i zapisać do pliku");
             Console.WriteLine("Aby wybrać sposób wyświetlenia raportu wpisz odpowiadającą mu cyfre: ");
 
             while (true)
