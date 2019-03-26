@@ -8,10 +8,7 @@ using System.Linq;
 namespace OrderServiceRaportsConsol
 {
     class Program : Raports.Raports
-    {
-        
-
-            
+    {                    
             static void Main(string[] args)
             {                        
                 string choice;
@@ -29,8 +26,7 @@ namespace OrderServiceRaportsConsol
                 do
                 {
                     Console.WriteLine("Podaj ścieżkę do pliku z listą plików z zamówieniami: ");
-                    //filePath = @Console.ReadLine();
-                    filePath = @"C:\Users\michu\Desktop\IT\Projekty\OrderServiceRaportsConsol\OrderServiceRaportsConsol\TestFiles\listaPlikow.txt";
+                    filePath = @Console.ReadLine();                    
 
                     fileList = ReadData.ReadFile(filePath);
                 } while (fileList.Count() == 0);
@@ -376,7 +372,7 @@ namespace OrderServiceRaportsConsol
                 Console.WriteLine("12.Zakończ program");
                 Console.WriteLine();
                 Console.WriteLine("Aby wybrać raport wpisz odpowiadającą mu cyfre: ");
-                */
+                
         }
             #endregion
 
