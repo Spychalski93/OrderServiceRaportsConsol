@@ -1,13 +1,9 @@
-﻿using OrderServiceRaportsConsol;
+﻿using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Xml;
-using System.Xml.Linq;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System.Collections;
 
 namespace OrderServiceRaportsConsol.ReadDateToCollection
 {
