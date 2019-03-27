@@ -18,7 +18,7 @@ namespace OrderServiceRaportsConsol.ReadDateToCollection
         public static List<string> ReadFile(string filePath)
         {
             string textLine;
-            List<string> readDate = new List<string>();
+            List<string> readData = new List<string>();
 
             try
             {
@@ -28,7 +28,7 @@ namespace OrderServiceRaportsConsol.ReadDateToCollection
                 {
                     textLine = streamReader.ReadLine();
                     if (textLine == null) break;
-                    readDate.Add(textLine);
+                    readData.Add(textLine);
                 } while (textLine != null);
 
                 Console.ForegroundColor = ConsoleColor.Green;
@@ -44,7 +44,7 @@ namespace OrderServiceRaportsConsol.ReadDateToCollection
                 Console.WriteLine("Błędna ściezka do pliku: " + filePath + Environment.NewLine);
                 Console.ResetColor();
             }
-            return readDate;
+            return readData;
         }
 
         /// <summary>

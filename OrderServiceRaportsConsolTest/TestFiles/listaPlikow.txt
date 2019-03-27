@@ -1,0 +1,4 @@
+C:\Users\michu\Desktop\IT\Projekty\OrderServiceRaportsConsol\OrderServiceRaportsConsol\TestFiles\z.csv
+C:\Users\michu\Desktop\IT\Projekty\OrderServiceRaportsConsol\OrderServiceRaportsConsol\TestFiles\z.xml
+C:\Users\michu\Desktop\IT\Projekty\OrderServiceRaportsConsol\OrderServiceRaportsConsol\TestFiles\z.json
+fhfh

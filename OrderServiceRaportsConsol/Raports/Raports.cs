@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace OrderServiceRaportsConsol.Raports
 {
-    class Raports
+    public class Raports
     {
-        #region 
+        #region Raporty
         /// <summary>
         /// Metoda sprawdzająca ilośc zamówień z plików wczytanych do programu
         /// </summary>
@@ -230,7 +230,7 @@ namespace OrderServiceRaportsConsol.Raports
         /// <param name="orders">lista wczytanych zamówień</param>
         /// <param name="clientId">numer klienta dla którego mają być wyświetlona średnia kwota zamowień</param>
         /// <returns name="averageOrderValue">średnia kwota zamówień dla wybranego klienta</returns>
-        protected static double ClientAverageOrderValue(List<Order> orders, String clientId)
+        protected static double ClientAverageOrderValue(List<Order> orders, string clientId)
         {
             double averageOrderValue = ClientTotalPrice(orders, clientId) / ClientNumbersOfOrders(orders, clientId);           
             averageOrderValue = Math.Round(averageOrderValue, 2);

@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace OrderServiceRaportsConsol
 {
-    class Program : Raports.Raports
+    public class Program : Raports.Raports
     {                    
             static void Main(string[] args)
             {                        
@@ -46,23 +46,23 @@ namespace OrderServiceRaportsConsol
                         {
                             case 1:
                                 raport = "Łączna liczba zamówień: " + NumbersOfOrders(Order.orders);
-                                RaportView.fileOrConsole(raport);
+                                RaportView.FileOrConsole(raport);
                                 goto raportInterface;
                             case 2:
                                 clientId = LoadClientId();
                                 raport = "Łączna liczba zamówień dla klienta o id '" + clientId + "': " 
                                     + ClientNumbersOfOrders(Order.orders, clientId);
-                                RaportView.fileOrConsole(raport);
+                                RaportView.FileOrConsole(raport);
                                 goto raportInterface;
                             case 3:
                                 raport = "Łączna kwota zamówień: " + TotalPrice(Order.orders);
-                                RaportView.fileOrConsole(raport);
+                                RaportView.FileOrConsole(raport);
                                 goto raportInterface;
                             case 4:
                                 clientId = LoadClientId();
                                 raport = "Łączna kwota zamówień dla klienta o id'" + clientId + "': " 
                                     + ClientTotalPrice(Order.orders, clientId);
-                                RaportView.fileOrConsole(raport);
+                                RaportView.FileOrConsole(raport);
                                 goto raportInterface;
                             case 5:                          
                                 sortingMethod = ChoseSortingMethod();
@@ -74,7 +74,7 @@ namespace OrderServiceRaportsConsol
                                     raport = "Wszystkie zamówienia: " + Environment.NewLine 
                                         + AllOrders(Order.orders, sortingMethod, ascendingOrDescending);
                                 }
-                                RaportView.fileOrConsole(raport);
+                                RaportView.FileOrConsole(raport);
                                 goto raportInterface;
                             case 6:
                                 clientId = LoadClientId();
@@ -88,24 +88,24 @@ namespace OrderServiceRaportsConsol
                                     raport = "Wszystkie zamówienia dla klienta o id'" + clientId + "': " + Environment.NewLine
                                         + ClientAllOrders(Order.orders, clientId, sortingMethod, ascendingOrDescending);
                                 }
-                                RaportView.fileOrConsole(raport);
+                                RaportView.FileOrConsole(raport);
                                 goto raportInterface;
                             case 7:
                                 raport = "Średnia wartość wszystkich zamówień: " + AverageOrderValue(Order.orders);
-                                RaportView.fileOrConsole(raport);
+                                RaportView.FileOrConsole(raport);
                                 goto raportInterface;
                             case 8:
                                 clientId = LoadClientId();
                                 raport = "Średnia wartość wszystkich zamówień dla klienta o id'" + clientId + "': " 
                                     + ClientAverageOrderValue(Order.orders, clientId);
-                                RaportView.fileOrConsole(raport);
+                                RaportView.FileOrConsole(raport);
                                 goto raportInterface;
                             case 9:
                                 sortingMethod = SortingMethodGroupByName();
                                 ascendingOrDescending = ChoiceAscendingOrDescending();
                                 raport = "Ilość zamówień pogrupowane po nazwie produktów: " + Environment.NewLine 
                                     + GroupNumberOfOrders(Order.orders,sortingMethod, ascendingOrDescending);
-                                RaportView.fileOrConsole(raport);
+                                RaportView.FileOrConsole(raport);
                                 goto raportInterface;
                             case 10:
                                 clientId = LoadClientId();
@@ -114,16 +114,16 @@ namespace OrderServiceRaportsConsol
                                 raport = "Ilość zamówień pogrupowane po nazwie produktów dla klienta o id'" + clientId + "': " 
                                     + Environment.NewLine 
                                     + ClientGroupNumberOfOrders(Order.orders, clientId, sortingMethod, ascendingOrDescending);
-                                RaportView.fileOrConsole(raport);
+                                RaportView.FileOrConsole(raport);
                                 goto raportInterface;
                             case 11:
                                 Console.WriteLine("Podaj dolną granice przedziału: ");
                                 min = LoadDoubleValue();
                                 Console.WriteLine("Podaj górną granice przedziału: ");
                                 max = LoadDoubleValue();                           
-                                raport = "Zamówienia w zamkniętym przedziale cenowym(" + min + "-" + max +"): " + Environment.NewLine 
+                                raport = "Zamówienia w przedziale cenowym(" + min + "-" + max +"): " + Environment.NewLine 
                                     + OrdersPriceRange(Order.orders, min, max);
-                                RaportView.fileOrConsole(raport);
+                                RaportView.FileOrConsole(raport);
                                 goto raportInterface;
                             case 12:
                                 goto end;
@@ -375,7 +375,6 @@ namespace OrderServiceRaportsConsol
                 
         }
             #endregion
-
 
     }
 }

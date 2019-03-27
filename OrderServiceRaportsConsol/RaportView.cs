@@ -9,7 +9,7 @@ namespace OrderServiceRaportsConsol
         /// Metoda pozwalająca wybrać sposób wyświetlenia raportu
         /// </summary>
         /// <param name="raport">raport do wyświetlenia</param>
-        public static void fileOrConsole(string raport)
+        public static void FileOrConsole(string raport)
         {
             int selectOption;
             string choice;
@@ -57,7 +57,7 @@ namespace OrderServiceRaportsConsol
         /// Metoda wyświetlajaca dane w konsoli
         /// </summary>
         /// <param name="raport">raport do wyświetlenia</param>
-        private static void RaportInDisplay(string raport)
+        public static void RaportInDisplay(string raport)
             {
                 Console.WriteLine();
                 Console.ForegroundColor = ConsoleColor.Cyan; 
@@ -73,7 +73,7 @@ namespace OrderServiceRaportsConsol
         /// Metoda tworzy katalog do zapis u zapisuje w nim plik z raportem
         /// </summary>
         /// <param name="raport">raport do zapisu</param>
-        private static void SaveInFile(string raport)
+        public static void SaveInFile(string raport)
         {           
             string pathApplication = Directory.GetCurrentDirectory();
             string pathDirectory = pathApplication.Remove(pathApplication.IndexOf(@"l\bin\D") + 1);
@@ -104,7 +104,7 @@ namespace OrderServiceRaportsConsol
         /// </summary>
         /// <param name="raport">raport do wyświtlenia</param>        
         /// <param name="pathDirectoryRaports">ścieżka do folderu</param>     
-        private static void CreateFileWithRaport(string pathDirectoryRaports, string raport)
+        public static void CreateFileWithRaport(string pathDirectoryRaports, string raport)
         {
             string choice;
             int selectOption;
